@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import Game from './game';
+import shortid from 'shortid';
 
 const width = 640;
 const height = 480;
@@ -55,21 +56,15 @@ export default class GameUI extends React.Component {
     });
   }
 
-  onSuccess() {
-
+  onSuccess(time) {
+    alert('congratulation!');
   }
 
   onMapChange(map, image) {
     this.setState({
-      map
+      map,
+      image
     });
-
-    // not null means it changed
-    if (image) {
-      this.setState({
-        image
-      });
-    }
   }
 
   start() {
@@ -89,13 +84,13 @@ export default class GameUI extends React.Component {
         >
           <div>
             <button onClick={e => this.start()}>New game</button>
-            <button>High scores</button>
+            <button onClick={e => this.props.game.showHighScore()}>High scores</button>
           </div>
           {this.state.map.map((row, rowIndex) => (
-            <div key={rowIndex} style={{ marginBottom: '-4px' }}>
+            <div key={shortid.generate()} style={{ marginBottom: '-4px' }}>
               {row.map((value, colIndex) => (
                 <Part
-                  key={colIndex}
+                  key={shortid.generate()}
                   col={value % 4}
                   row={parseInt(value / 4, 10)}
                   current={this.isCurrent(rowIndex, colIndex)}

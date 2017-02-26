@@ -3118,6 +3118,10 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
+jquery@^3.1.1:
+  version "3.1.1"
+  resolved "http://registry.npm.taobao.org/jquery/download/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
+
 js-base64@^2.1.9:
   version "2.1.9"
   resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -4872,6 +4876,10 @@ shelljs@^0.6.0:
 shellwords@^0.1.0:
   version "0.1.0"
   resolved "http://registry.npm.taobao.org/shellwords/download/shellwords-0.1.0.tgz#66afd47b6a12932d9071cbfd98a52e785cd0ba14"
+
+shortid@^2.2.6:
+  version "2.2.6"
+  resolved "http://registry.npm.taobao.org/shortid/download/shortid-2.2.6.tgz#3abbefc6c51074cf2c1f1e72f6216a1b45876d72"
 
 signal-exit@^3.0.0:
   version "3.0.2"
